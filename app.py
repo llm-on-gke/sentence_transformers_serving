@@ -10,7 +10,7 @@ from waitress import serve
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST'])
+@app.route('/embed', methods=['POST'])
 def encode():
     data = request.json
     sentences = data.get("inputs", [])
