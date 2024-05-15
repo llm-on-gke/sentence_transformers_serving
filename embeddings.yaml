@@ -24,7 +24,7 @@ spec:
         cloud.google.com/gke-accelerator: nvidia-tesla-t4
       containers:
       - name: embeddings
-        image: us-east1-docker.pkg.dev/$PROJECT_ID/gke-llm/sentence-transformer:latest #ghcr.io/huggingface/text-embeddings-inference:1.2
+        image: us-east1-docker.pkg.dev/rick-vertex-ai/gke-llm/sentence-transformer:latest #ghcr.io/huggingface/text-embeddings-inference:1.2
         resources:
             limits:
               nvidia.com/gpu: 1
