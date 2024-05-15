@@ -21,7 +21,7 @@ spec:
          emptyDir:
               medium: Memory
       nodeSelector:
-        cloud.google.com/gke-accelerator: nvidia-testla-t4
+        cloud.google.com/gke-accelerator: nvidia-tesla-t4
       containers:
       - name: embeddings
         image: us-east1-docker.pkg.dev/$PROJECT_ID/gke-llm/sentence-transformer:latest #ghcr.io/huggingface/text-embeddings-inference:1.2
