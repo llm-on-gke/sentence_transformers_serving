@@ -4,7 +4,7 @@ import os
 
 from flask import Flask, jsonify, request
 from sentence_transformers import SentenceTransformer
-from sentence_transformers.util import cos_sim
+#from sentence_transformers.util import cos_sim
 from waitress import serve
 
 app = Flask(__name__)

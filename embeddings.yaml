@@ -29,8 +29,9 @@ spec:
         #    limits:
         #      nvidia.com/gpu: 1
         env:
-            - name: model-id
-              value: WhereIsAI/UAE-Large-V1
+            - name: model_name
+              value: Alibaba-NLP/gte-large-en-v1.5
+            
             - name: shm-size
               value: 1g
         ports:
