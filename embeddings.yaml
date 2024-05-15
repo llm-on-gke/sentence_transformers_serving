@@ -4,15 +4,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tei-uve-large
+  name: embedding-serve
 spec:
   selector:
     matchLabels:
-      app: tei-uve-large
+      app: embedding-serve
   template:
     metadata:
       labels:
-        app: tei-uve-large
+        app: embedding-serve
     spec:
       volumes:
        - name: data
@@ -45,11 +45,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tei-embedding
+  name: embedding-serve
 spec:
   type: LoadBalancer
   selector:
-    app: tei-uve-large
+    app: embedding-serve
   ports:
   - protocol: TCP
     port: 8080
