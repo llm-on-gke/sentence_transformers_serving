@@ -35,7 +35,7 @@ spec:
             - name: shm-size
               value: 1g
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         volumeMounts:
             - mountPath: /dev/shm
               name: dshm
@@ -53,4 +53,4 @@ spec:
   ports:
   - protocol: TCP
     port: 8080
-    targetPort: 80
+    targetPort: 5000
