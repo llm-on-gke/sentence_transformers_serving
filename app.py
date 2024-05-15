@@ -17,7 +17,7 @@ def encode():
     #batch_size = int(os.environ.get("batch_size", 8))
     embeddings = model.encode(sentences)
     #embeddings = encoder.encode(sentences, batch_size=batch_size)
-    #embeddings = [x.tolist() for x in embeddings]
+    embeddings = [x.tolist() for x in embeddings]
 
     return jsonify(embeddings)
 
