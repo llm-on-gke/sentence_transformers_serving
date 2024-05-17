@@ -57,11 +57,22 @@ gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${REGION}
 Make sure cluster in ready mode
 
 ## Deploy the embedding model
-
-Run the following command to deploy embedding model to GKE cluster created
-Update the image path in embeddings.yaml file, then Run the following command to deploy embeddings model
+Update embeddings.yaml file, with proper image path, and GPU resource allocations:
 ```
-kubectl apply embeddings.yaml
+ image: us-east1-docker.pkg.dev/rick-vertex-ai/gke-llm/sentence-transformer:latest #replace with your sentence transformer image path
+        resources:
+            limits:
+              cpu: "2"
+              memory: "8Gi"
+              nvidia.com/gpu: "1"
+            requests:
+              cpu: "2"
+              memory: "8Gi"
+              nvidia.com/gpu: "1"
+```
+then Run the following command to deploy embeddings model:
+```
+kubectl apply -f embeddings.yaml
 
 ```
 Validations: 

@@ -27,7 +27,7 @@ spec:
         cloud.google.com/gke-gpu-driver-version: "latest"
       containers:
       - name: embeddings
-        image: us-east1-docker.pkg.dev/rick-vertex-ai/gke-llm/sentence-transformer:latest #ghcr.io/huggingface/text-embeddings-inference:1.2
+        image: us-east1-docker.pkg.dev/rick-vertex-ai/gke-llm/sentence-transformer:latest #replace with your sentence transformer image path
         resources:
             limits:
               cpu: "2"
