@@ -59,6 +59,10 @@ Make sure cluster in ready mode
 ## Deploy the embedding model
 Update embeddings.yaml file, with proper image path, and GPU resource allocations:
 ```
+ nodeSelector:
+        cloud.google.com/gke-accelerator: nvidia-tesla-t4
+ ...
+ ...       
  image: us-east1-docker.pkg.dev/rick-vertex-ai/gke-llm/sentence-transformer:latest #replace with your sentence transformer image path
         resources:
             limits:
