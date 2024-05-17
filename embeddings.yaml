@@ -23,7 +23,7 @@ spec:
       nodeSelector:
         cloud.google.com/gke-accelerator: nvidia-tesla-t4
         cloud.google.com/compute-class: "Accelerator"
-        cloud.google.com/gke-accelerator-count: 1
+        cloud.google.com/gke-accelerator-count: "1"
         cloud.google.com/gke-gpu-driver-version: "latest"
       containers:
       - name: embeddings
@@ -32,11 +32,11 @@ spec:
             limits:
               cpu: "2"
               memory: "8Gi"
-              nvidia.com/gpu: 1
+              nvidia.com/gpu: "1"
             requests:
               cpu: "2"
               memory: "8Gi"
-              nvidia.com/gpu: 1
+              nvidia.com/gpu: "1"
         env:
             - name: model_name
               value: Alibaba-NLP/gte-large-en-v1.5
