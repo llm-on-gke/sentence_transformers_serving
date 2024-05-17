@@ -16,12 +16,12 @@ To set up your environment with Cloud Shell, follow these steps:
 In the Google Cloud console, launch a Cloud Shell session by clicking Cloud Shell activation icon Activate Cloud Shell in the Google Cloud console. This launches a session in the bottom pane of Google Cloud console.
 
 Set the default environment variables:
-
+```
 gcloud config set project PROJECT_ID
 export PROJECT_ID=$(gcloud config get project)
 export REGION=us-east1
 export CLUSTER_NAME=embedding
-
+```
 Enable the required APIs to create a GK cluster:
 ```
 gcloud services enable compute.googleapis.com container.googleapis.com
@@ -90,7 +90,7 @@ NAME              TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)         
 embedding-serve   LoadBalancer   34.118.237.68   35.227.77.40   8080:30518/TCP   12m
 kubernetes        ClusterIP      34.118.224.1    <none>         443/TCP          20m
 
-## curl tess with Embedding model
+## curl tests against Embedding model
 ```
 curl SVC_IP:8080/embed -X POST \
 -d '{"inputs":"What is Deep Learning?"}' \
