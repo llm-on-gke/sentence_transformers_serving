@@ -23,7 +23,8 @@ spec:
       - name: embeddings
         image: ghcr.io/huggingface/text-embeddings-inference:cpu-1.2
         imagePullPolicy: Always
-        requests:
+        resources:
+            requests:
                 cpu: "2"
                 memory: "2Gi"
         env:
