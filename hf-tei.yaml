@@ -18,7 +18,7 @@ spec:
          emptyDir:
               medium: Memory
       nodeSelector:
-         cloud.google.com/compute-class: "General-purpose"
+         cloud.google.com/compute-class: "Balanced"
       containers:
       - name: embeddings
         image: ghcr.io/huggingface/text-embeddings-inference:cpu-1.2
